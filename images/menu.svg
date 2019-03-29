@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Masthead" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components/Masthead/-Mobile-/-Header-Main" transform="translate(-16.000000, -20.000000)" fill="#333333" fill-rule="nonzero">
+            <g id="Menu" transform="translate(16.000000, 20.000000)">
+                <path d="M23.56,0 L0.44,0 C0.1968,0 0,0.335556229 0,0.750227342 C0,1.16489845 0.1968,1.5 0.44,1.5 L23.56,1.5 C23.8032,1.5 24,1.16444377 24,0.750227342 C24,0.336010912 23.8032,0 23.56,0 Z" id="Shape"></path>
+                <path d="M0.434567901,9.5 L17.3432099,9.5 C17.5834074,9.5 17.7777778,9.16444377 17.7777778,8.75022734 C17.7777778,8.33601091 17.5834074,8 17.3432099,8 L0.434567901,8 C0.19437037,8 0,8.33555623 0,8.75022734 C0,9.16489845 0.19437037,9.5 0.434567901,9.5 Z" id="Shape"></path>
+                <path d="M23.56,16 L0.44,16 C0.1968,16 0,16.3354545 0,16.75 C0,17.1640909 0.1968,17.5 0.44,17.5 L23.56,17.5 C23.8032,17.5 24,17.1640909 24,16.75 C24,16.3354545 23.8032,16 23.56,16 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
