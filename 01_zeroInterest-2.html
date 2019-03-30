@@ -41,15 +41,16 @@
         </div>
         <script>
             function myFunction() {
-               // if(myText>0){
+                var amount = document.getElementById("myText").value;
+              if(amount>0){
                     var opOne = document.getElementById("myText").value /47.0654 ;
                     var opTwo = document.getElementById("myText").value /31.9118 ;
                     var opThree = document.getElementById("myText").value /47.0654 ;
                     document.getElementById("demoOne").innerHTML = opOne.toFixed(2);
                     document.getElementById("demoTwo").innerHTML = opTwo.toFixed(2);
                     document.getElementById("demoThree").innerHTML = opThree.toFixed(2);
-             //   }else{
-               //     location.href = 'https://jinseok928.github.io/CSS/01_zeroInterest.html';
+                }else{
+                   location.href = 'https://jinseok928.github.io/CSS/01_zeroInterest.html';
                 }
             </script>
         <div id="options" style="padding:0px 16px 40px 16px;">
