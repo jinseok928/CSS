@@ -26,21 +26,29 @@
             <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="width:100%; padding-top:16px; margin-bottom:24px;">
                 <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
                     <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">Loan Amount</label>
-                    <div style="width: 99%; border: 2px solid #bebebe; border-radius: 4px;">
-                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" id="amount" data-id="amount" 
+                    <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
+                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" id="myText"
                         type="tel" aria-describedby="monetary-normal--error-container"
-                        style="height:100%; display:inline; border:0px; margin:0px !important; ">
-                        <a class="sprk-c-Button" data-id="SeeMyOptions" style="
+                        style="height:45px; width:200px; border:0px; margin:0px !important; ">
+                        <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
                         padding:8px !important; height:45px; width:58px; padding:0px; text-align:center; float:right;
-                        border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;"
-                        href="02_zeroInterest-2.html">
-                            <img src="images/refresh.svg">
-                        </a>
-                        
+                        border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;">   
+                        <img src="images/refresh.svg">
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            function myFunction() {
+                var amount=document.getElementById("myText").value 
+                if(amount>0){
+                    window.location.href='02_zeroInterest-2.html';
+                }else{
+                    window.location.href='02_zeroInterest.html';
+                }
+                      }
+            </script>
         <div id="options" style="padding:0px 16px 40px 16px; min-height:500px;">
         </div>
 
