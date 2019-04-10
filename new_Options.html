@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>RocketLoans New Offer Page</title>
+        <link rel="preload" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css"></noscript>
+        <link rel="preload" href="https://sparkdesignsystem.com/assets/drizzle/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://sparkdesignsystem.com/assets/drizzle/styles/main.css"></noscript>
+        <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+    </head>
+    <body>    
+        <div id="header" style="height:61px; padding:16px; border-bottom: solid 2px #E6E6E6; vertical-align: middle;">
+            <div id="menu" style="width:20%; display:inline-block; vertical-align: middle;">
+                <img src="images/menu.svg">
+            </div>
+            <div id="logo" style="width:60%; display:inline-block; text-align:center; vertical-align: middle;">
+                <img src="images/logo.svg">
+            </div>
+            <div style="width:20%; display:inline-block; vertical-align: middle;">
+            </div>
+        </div>
+        <div id="main" style="padding:16px 16px 0px 16px;">
+            <p class="sprk-b-TypeBodyTwo">Good news! You are pre-approved for up to <b style="font-weight:500;">$35,000</b>. What is the amount you need?</p>
+            <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="width:100%; padding-top:16px; margin-bottom:24px;">
+                <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">Loan Amount</label>
+                    <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
+                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" id="myText"
+                        type="tel" aria-describedby="monetary-normal--error-container"
+                        style="height:45px; width:200px; border:0px; margin:0px !important; ">
+                        <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
+                        padding:8px !important; height:45px; width:58px; padding:0px; text-align:center; float:right;
+                        border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;">   
+                        <img src="images/refresh.svg">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var amount=document.getElementById("myText").value;
+                if(amount>0){
+                    var opOne = document.getElementById("myText").value /47.0654 ;
+                    var opTwo = document.getElementById("myText").value /31.9118 ;
+                    var opThree = document.getElementById("myText").value /47.0654 ;
+                    document.getElementById("demoOne").innerHTML = opOne.toFixed(2);
+                    document.getElementById("demoTwo").innerHTML = opTwo.toFixed(2);
+                    document.getElementById("demoThree").innerHTML = opThree.toFixed(2);
+                
+            var template = `<div id="options" style="padding:0px 16px 40px 16px;">
+                <div style="border-radius:4px; width:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin-top: 8px; margin-bottom:8px;"> 
+                    <div id="optionOne" style="width:auto; min-height:72px;  border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;">
+                        <div style="float:left;">
+                            <p id="titleOneOne" class="sprk-b-TypeBodyFour" style="padding-bottom:8px;">Zero interest for 6 months!</p>
+                            <p id="titleOneTwo" class="sprk-b-TypeBodyTwo" style="display:inline;">
+                                <b id="demoOne" style="display:inline !important; font-size: 1.625rem; font-weight: 500;">
+                            
+                                </b> / month
+                            </p>
+                        </div>
+                        <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
+                            <img id="selectorOne" src="images/UnselectedCircle.svg" type="button" value='select' onclick="
+                            document.querySelector('#optionOne').style.backgroundColor='#13A48E'; 
+                            document.querySelector('#titleOneOne').style.color='white';
+                            document.querySelector('#titleOneTwo').style.color='white';
+                            document.getElementById('selectorOne').src='images/SelectedCircle.svg';
+                            document.querySelector('#optionTwo').style.backgroundColor='white'; 
+                            document.querySelector('#titleTwoOne').style.color='#333333';
+                            document.querySelector('#titleTwoTwo').style.color='#333333';
+                            document.getElementById('selectorTwo').src='images/UnselectedCircle.svg';
+                            document.querySelector('#optionThree').style.backgroundColor='white'; 
+                            document.querySelector('#titleThreeOne').style.color='#333333';
+                            document.querySelector('#titleThreeTwo').style.color='#333333';
+                            document.getElementById('selectorThree').src='images/UnselectedCircle.svg';
+                            ">                        
+                        </div>
+                    </div>
+                    <div style="width:65%; padding:16px 16px 0 16px; float:left;">
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term</p>
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">APR after 6 months<img src="images/help.png" style="padding-left:8px;"></p>
+                    </div>
+                    <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">60 Mo.</p>
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">7.99%</p>
+                    </div>
+                    <div style="width:100%; float:bottom;  padding:0 16px 24px 16px;">
+                        <p class="sprk-b-TypeBodyFour" style="">0% APR will be offered for first six months, and then the specified APR would be charged for remained 60 months.</p>
+                    </div>
+                </div>
+                <div style="border-radius:4px; width:auto; height:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin: 16px 0 16px 0; min-height:166px;"
+                > 
+                    <div id="optionTwo" style="min-height:72px; border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;">
+                        <div style="float:left;">
+                            <p id="titleTwoOne" class="sprk-b-TypeBodyFour" style="padding-bottom:8px;">Pay off quickly!</p>
+                            <p id="titleTwoTwo" class="sprk-b-TypeBodyTwo" style="display:inline;">
+                                <b id="demoTwo" style="display:inline !important; font-size: 1.625rem; font-weight: 500;">
+                        
+                                </b> / month
+                            </p>
+                        </div>
+                        <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
+                            <img id="selectorTwo" src="images/UnselectedCircle.svg"
+                            type="button" value='select' onclick="
+                document.querySelector('#optionOne').style.backgroundColor='white'; 
+                document.querySelector('#titleOneOne').style.color='#333333';
+                document.querySelector('#titleOneTwo').style.color='#333333';
+                document.getElementById('selectorOne').src='images/UnselectedCircle.svg';
+                document.querySelector('#optionTwo').style.backgroundColor='#13A48E'; 
+                document.querySelector('#titleTwoOne').style.color='white';
+                document.querySelector('#titleTwoTwo').style.color='white';
+                document.getElementById('selectorTwo').src='images/SelectedCircle.svg';
+                document.querySelector('#optionThree').style.backgroundColor='white'; 
+                document.querySelector('#titleThreeOne').style.color='#333333';
+                document.querySelector('#titleThreeTwo').style.color='#333333';
+                document.getElementById('selectorThree').src='images/UnselectedCircle.svg';
+                ">   
+                        </div>
+                    </div>
+                    <div style="width:65%; padding:16px 16px 0 16px; float:left;">
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term</p>
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="images/help.png" style="padding-left:8px;"></p>
+                    </div>
+                    <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">36 Mo.</p>
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 0px;">7.99%</p>
+                    </div>
+                    <div style="width:100%; float:bottom;  padding:0 16px 24px 16px;">
+                        <p class="sprk-b-TypeBodyFour" style=""></p>
+                    </div>
+                </div>
+                <div id="option2" style="border-radius:4px; width:auto; height:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin: 16px 0 16px 0; min-height:166px;"
+                > 
+                    <div id="optionThree" style="min-height:72px; border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;">
+                        <div style="float:left;">
+                            <p id="titleThreeOne" class="sprk-b-TypeBodyFour" style="padding-bottom:8px;">Increase monthly saving!</p>
+                            <p id="titleThreeTwo" class="sprk-b-TypeBodyTwo" style="display:inline;">
+                                <b  id="demoThree" style="display:inline !important; font-size: 1.625rem; font-weight: 500;">
+                                
+                                </b> / month
+                            </p>
+                        </div>
+                        <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
+                            <img id="selectorThree" src="images/UnselectedCircle.svg"
+                            type="button" value='select' onclick="
+                document.querySelector('#optionOne').style.backgroundColor='white'; 
+                document.querySelector('#titleOneOne').style.color='#333333';
+                document.querySelector('#titleOneTwo').style.color='#333333';
+                document.getElementById('selectorOne').src='images/UnselectedCircle.svg';
+                document.querySelector('#optionTwo').style.backgroundColor='white'; 
+                document.querySelector('#titleTwoOne').style.color='#333333';
+                document.querySelector('#titleTwoTwo').style.color='#333333';
+                document.getElementById('selectorTwo').src='images/UnselectedCircle.svg';
+                document.querySelector('#optionThree').style.backgroundColor='#13A48E'; 
+                document.querySelector('#titleThreeOne').style.color='white';
+                document.querySelector('#titleThreeTwo').style.color='white';
+                document.getElementById('selectorThree').src='images/SelectedCircle.svg';
+                ">
+                        </div>
+                    </div>
+                    <div style="width:65%; padding:16px 16px 0 16px; float:left;">
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term</p>
+                        <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="images/help.png" style="padding-left:8px;"></p>
+                    </div>
+                    <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px; font-weight:500;">60 Mo.</p>
+                        <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 0px; font-weight:500;">9.99%</p>
+                    </div>
+                </div>
+                <p class="sprk-b-TypeBodyFour" style="padding-bottom:32px;">Loan payment amount and APR assumes Autopay discount. Offers expire in 30 days. By selecting an offer and continuing, you will be subject to a hard credit inquiry (which may impact your credit score).</p>
+                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;">
+                    Select My Offer
+                </button>
+            </div>`;
+      response.end(template);}
+
+        </script>
+        <div id="footer" style="background-color:#F7F7F7; padding:24px 16px 40px 16px;">
+            <p class="sprk-b-TypeBodyFour" style="">
+                Copyright protected 2019 RockLoans Marketplace LLC. All rights reserved.<br><br>
+                All personal loans are made by RockLoans Marketplace LLC, a Michigan limited liability company, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. Please refer to our Disclosures and Licenses page for state-required disclosures, licenses, and lending restrictions. 
+                Borrower must be a U.S. citizen or permanent U.S. resident alien at least 18 years of age (in Nebraska and Alabama a borrower must be at least 19 years of age). All loan applications are subject to credit review and approval and offered loan terms depend upon credit score, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice. 
+                <br><br>          
+                Please refer to our Terms of Use for additional terms and conditions, and to Rocket Loans' Privacy Notice to learn more about what we do with your personal information. 
+                NMLS #1399530. Click here for Rocket Loans' NMLS consumer access page.
+                <br><br>      
+                RockLoans Marketplace LLC dba RocketLoans dba Rocket Loans | 1274 Library Street, 2nd Floor, Detroit, MI 48226
+            </p>
+        </div>
+    </body>
+</html>

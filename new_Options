@@ -55,6 +55,7 @@
                 }
             }
         </script>
+       // <script>
             
         <div id="options" style="padding:0px 16px 40px 16px;">
             <div style="border-radius:4px; width:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin-top: 8px; margin-bottom:8px;"> 
@@ -162,7 +163,8 @@
             document.querySelector('#optionThree').style.backgroundColor='#13A48E'; 
             document.querySelector('#titleThreeOne').style.color='white';
             document.querySelector('#titleThreeTwo').style.color='white';
-            document.getElementById('selectorThree').src='images/SelectedCircle.svg';">
+            document.getElementById('selectorThree').src='images/SelectedCircle.svg';
+            ">
                     </div>
                 </div>
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
@@ -179,14 +181,15 @@
                 Select My Offer
             </button>
         </div>
+ //   </script>
         <div id="footer" style="background-color:#F7F7F7; padding:24px 16px 40px 16px;">
-            <p class="sprk-b-TypeBodyFour">
+            <p class="sprk-b-TypeBodyFour" style="">
                 Copyright protected 2019 RockLoans Marketplace LLC. All rights reserved.<br><br>
                 All personal loans are made by RockLoans Marketplace LLC, a Michigan limited liability company, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. Please refer to our Disclosures and Licenses page for state-required disclosures, licenses, and lending restrictions. 
                 Borrower must be a U.S. citizen or permanent U.S. resident alien at least 18 years of age (in Nebraska and Alabama a borrower must be at least 19 years of age). All loan applications are subject to credit review and approval and offered loan terms depend upon credit score, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice. 
                 <br><br>          
-                Please refer to our Terms of Use for additional terms and conditions, and to Rocket Loans Privacy Notice to learn more about what we do with your personal information. 
-                NMLS #1399530. Click here for Rocket Loans NMLS consumer access page.
+                Please refer to our Terms of Use for additional terms and conditions, and to Rocket Loans' Privacy Notice to learn more about what we do with your personal information. 
+                NMLS #1399530. Click here for Rocket Loans' NMLS consumer access page.
                 <br><br>      
                 RockLoans Marketplace LLC dba RocketLoans dba Rocket Loans | 1274 Library Street, 2nd Floor, Detroit, MI 48226
             </p>
