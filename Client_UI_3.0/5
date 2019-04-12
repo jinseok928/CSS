@@ -3,7 +3,7 @@
   <div class="sprk-o-Stack sprk-o-Stack--large">
 <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
       <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
-      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading">
+      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading" onclick="cta();">
         Please Wait...
       </h2>
 
