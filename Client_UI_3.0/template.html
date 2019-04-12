@@ -81,6 +81,19 @@
         #TextInput[readonly]{color:#f7f7f7}
        
         </style>
+        <script>
+            var pageNumber=0;
+    function cta(){
+        pageNumber++;
+        fetch(pageNumber).then(function(response){
+            response.text().then(function(text){
+                document.querySelector('#contents').innerHTML =text;
+            })
+        });
+    }
+
+ 
+    </script>
     </head>
     <body>
     <div id="header">
@@ -92,18 +105,7 @@
         </div>
     
     </div>
-    <script>
-    function callToAction{
-        pageNumber++;
-        fetch(pageNumber).then(function(response){
-            response.text().then(function(text){
-                document.querySelector('#contents').innerHTML =text;
-            })
-        });
-    }
-
-    var pageNumber=0;
-    </script>
+    
    
     <div id="contents">
      
