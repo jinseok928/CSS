@@ -6,8 +6,7 @@
         <title>New Client UI Design 3.0</title>
         <link rel="preload" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css"></noscript>
-        <link rel="preload" href="https://sparkdesignsystem.com/assets/drizzle/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://sparkdesignsystem.com/assets/drizzle/styles/main.css"></noscript>
+   
         <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
 
         <style>
@@ -20,16 +19,67 @@
         #menu{width:20%; display:inline-block; vertical-align: middle;}
         #logo{width:60%; display:inline-block; text-align:center; vertical-align: middle;        
         }
+
+        #inputTwo{
+            width: calc(50% - 10px);
+      
+   
+        }
+        #inputThree{
+            width: calc(33% - 8px);
+           
+            margin-right: 8px;
+        }
+
+        
         #footer{
             background-color:#F7F7F7; 
             padding:24px 16px 40px 16px;
 
         }
         #contents{
-            padding:16px 16px 0px 16px;
+            padding:16px 16px 40px 16px;
             min-height: 300px;
+        }
+     
+        #title{padding-top: 8px;
+        margin-bottom:24px;
 
         }
+        #input{
+            margin-bottom:16px !important;
+
+        }
+        #input_helper{
+            margin-bottom:8px !important;
+            font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
+        }
+        #body{
+             margin-top:16px;
+             font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
+        }
+        #CTA{
+            padding-top:8px;
+            font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
+        }
+        .sprk-b-PageTitle:before{content:"";width:32px;border-top-width:5px;border-top-style:solid;border-top-color:#c8102e;padding:0 0 16px}@media (min-width:54rem){.sprk-b-PageTitle:before{border-top-width:6px;padding:0 0 16px}}
+        .sprk-b-TypeDisplayTwo,h2{line-height:1;color:#333;font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;font-size:2rem;font-weight:500}
+        .sprk-b-TypeBodyFour{letter-spacing: -0.2px;}
+
+        #TextInput{
+            width: calc(50% - 8px);
+            box-shadow:none;border:2px solid #bebebe;
+            border-radius:4px;color:#333;
+            font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;font-size:1rem;font-weight:300;line-height:1;height:48px;
+            outline:0;padding:0 16px;
+            transition:border-color .15s ease}
+        #TextInput:focus{border-color:#13a48e}
+        #TextInput--error,.sprk-b-TextInput--error:focus{border-color:#f5be40}
+        #TextInput[disabled]{background-color:#cfcfcf;border-color:#cfcfcf;color:gray;cursor:not-allowed}
+        #TextInput--has-svg-icon{padding:12px 0 12px 40px}
+        #TextInput--has-text-icon{padding:12px 13px 12px 37px}
+        #TextInput[readonly]{color:#f7f7f7}
+       
         </style>
     </head>
     <body>
@@ -43,23 +93,103 @@
     
     </div>
     <script>
-     var pageNumber=1;
-     fetch(pageNumber).then(function(response){
-         response.text().then(function(text){
-             document.querySelector('#contents').innerHTML =text;
-         })
-     });
+    function callToAction{
+        pageNumber++;
+        fetch(pageNumber).then(function(response){
+            response.text().then(function(text){
+                document.querySelector('#contents').innerHTML =text;
+            })
+        });
+    }
+
+    var pageNumber=0;
     </script>
    
     <div id="contents">
-       
-   
+        <!--PageOne-->
+        <div id='title'>
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Personal Information</h1>
+            </div>
+    
+            <div class="sprk-b-InputContainer">
+                <label for="text-input-normal" class="sprk-b-Label">First name</label>
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
 
+                <label for="text-input-normal" class="sprk-b-Label">Last Name</label>
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+            
+                <label for="text-input-normal" class="sprk-b-Label">Phone Number</label>
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+            
+                <label for="text-input-helper" class="sprk-b-Label">Email</label>
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input_helper" data-id="text-input-helper" type="text" value="" aria-describedby="text-input-helper--error-container" aria-invalid="true">
+                <div class="sprk-b-TypeBodyFour">
+                    Please review the Communication Consent below about our use of your phone number and email address.
+                </div>
+            </div>
+            <div id="CTA">
+                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="callToAction;">
+                    Continue
+            </button>
+        </div>
+        <!--PageTwo-->
+        <div id='title'>
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Home Address</h1>
+        </div>
+    
+        <div class="sprk-b-InputContainer">
+            <label for="text-input-normal" class="sprk-b-Label">Street Address</label>
+            <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+            <label for="text-input-normal" class="sprk-b-Label">Apt, Suite, Unit, etc.</label>
+            <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+            <label class="sprk-b-Label">City</label>
+            <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+            <div>
+                <div id="inputTwo" style="float:left">
+                    <label class="sprk-b-Label" >City</label>
+                    <input class="sprk-b-TextInput" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" style="width:100%;">
+                </div>
+                <div id="inputTwo" style="float:right;">
+                    <label class="sprk-b-Label">Zip Code</label>
+                    <input class="sprk-b-TextInput" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" style="width:100%;">
+                </div>
+            </div>
+            <p class="sprk-b-TypeBodyFour">
+                Please review the Communication Consent below about our use of your phone number and email address.
+            </p>
+            <div style="margin-top:16px;">
+                <label class="sprk-b-Label">Date of Birth (MM/DD/YY)</label>
+                <input class="sprk-b-TextInput" id="inputThree" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" placeholder="MM">
+                <input class="sprk-b-TextInput" id="inputThree" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" placeholder="DD">
+                <input class="sprk-b-TextInput" id="inputThree" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" style='margin:0; float:right;' placeholder="YYYY">
+                </div>
+        </div>
+        <div id="CTA">
+            <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="callToAction;">
+                Continue
+            </button>
+        </div>
 
-
-
+    <!--PageThree-->
+        <div id='title'>
+        
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Annual Income</h1>
+            </div>
+         
+            <div class="sprk-b-InputContainer sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+             
+                <label for="text-input-helper" class="sprk-b-Label">Pre-tax Annual Income</label>
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input_helper" data-id="text-input-helper" type="text" value="" aria-describedby="text-input-helper--error-container" aria-invalid="true">
+                <div class="sprk-b-TypeBodyFour">
+                    You do not need to include alimony, child support or separate maintenance income unless you want it considered as a basis for repaying the loan.
+                </div>
+            </div>
+            <div id="CTA">
+                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="callToAction;">
+                    Continue
+            </button>
+        </div>
     </div>
-  
     <div id="footer">
         <p class="sprk-b-TypeBodyFour">
                 Copyright protected 2019 RockLoans Marketplace LLC. All rights reserved.<br><br>
@@ -72,5 +202,6 @@
                 RockLoans Marketplace LLC dba RocketLoans dba Rocket Loans | 1274 Library Street, 2nd Floor, Detroit, MI 48226
         </p>
     </div>
+    
 </body>
 </html>
