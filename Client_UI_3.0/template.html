@@ -100,22 +100,30 @@
             var pageNumber=0;
     function cta(){
         pageNumber++;
-        fetch('./'+pageNumber).then(function(response){
+        
+        fetch(pageNumber).then(function(response){
+            if(response.status == '404'){
+                fetch('NotFound').then(function(response){
+                    response.text().then(function(text){
+                        document.querySelector('#contents').innerHTML =text;
+                    })
+                });
+            } else{       
+                response.text().then(function(text){
+                    document.querySelector('#contents').innerHTML =text;
+                    })
+                }
+            
+            });
+        }
+
+    function goback(){
+        pageNumber--;
+        fetch(pageNumber).then(function(response){
             response.text().then(function(text){
                 document.querySelector('#contents').innerHTML =text;
             })
         });
-    }
-    function goback(){
-        pageNumber--;
-        fetch(pageNumber).then(function(response){if(response.status == '404'){
-            alert('Not found')
-            }else if{
-                response.text().then(function(text){
-                    document.querySelector('#contents').innerHTML =text;
-                })
-            }
-            });
     }
     cta();
 
