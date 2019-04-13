@@ -1,11 +1,11 @@
 
         <div id='title'>
-            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Up to $35,000</h1>
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Pre-approved <br>up to $35,000</h1>
         </div>
         <div id="sprk-b-InputContainer" style="margin-bottom:8px;">
             <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="margin-bottom:16px;">
                 <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
-                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">Loan Amount</label>
+                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">What is the amount you need?</label>
                     <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
                         <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
                         <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
