@@ -112,18 +112,27 @@
             } else{       
                 response.text().then(function(text){
                     document.querySelector('#contents').innerHTML =text;
-                    })
-                }
+                })
+            }
             
-            });
-        }
+        });
+    }
 
     function goback(){
-        pageNumber--;
-        fetch(pageNumber).then(function(response){
-            response.text().then(function(text){
-                document.querySelector('#contents').innerHTML =text;
-            })
+        pageNumber--; fetch(pageNumber).then(function(response){
+            if(response.status == '404'){
+                document.write('404');
+                fetch('NotFound').then(function(response){
+                    response.text().then(function(text){
+                        document.querySelector('#contents').innerHTML =text;
+                    })
+                });
+            } else{       
+                response.text().then(function(text){
+                    document.querySelector('#contents').innerHTML =text;
+                })
+            }
+            
         });
     }
     cta();

@@ -1,6 +1,6 @@
 <div class="sprk-o-Stack sprk-o-Stack--split@xs">
     <div class="sprk-o-Stack__item sprk-o-Stack__item--fourth@xs">
-      <img src="images/S-404.svg" class="not-found-graphic" alt="Not Found">
+      <img src="../images/S-404.svg" class="not-found-graphic" alt="Not Found">
     </div>
     <div class="sprk-o-Stack__item sprk-o-Stack__item--three-fourths@xs">
       <h2 class="sprk-b-TypeDisplayTwo">
