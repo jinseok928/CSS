@@ -6,7 +6,7 @@
       <h2 class="sprk-b-TypeDisplayTwo">
         That page isn't here.<br>Sorry about that!
       </h2>
-      <p class="sprk-b-TypeBodyTwo">
+      <p class="sprk-b-TypeBodyTwo textPadding">
         It looks like the URL is broken or the page has been moved. Try hitting
         your back button or navigating to another page.
       </p>
