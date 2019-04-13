@@ -32,7 +32,7 @@
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Loan Amount</p>
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term after 6 motnhs</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">APR after 6 months<img src="images/help.png" style="padding-left:8px;"></p>
+                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">APR after 6 months<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
                     <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">$30,000</p>
@@ -55,7 +55,7 @@
                         </p>
                     </div>
                     <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
-                        <img id="selectorTwo" src="images/UnselectedCircle.svg"
+                        <img id="selectorTwo" src="../images/UnselectedCircle.svg"
                         value='select' onclick="
             document.querySelector('#optionOne').style.backgroundColor='white'; 
             document.querySelector('#titleOneOne').style.color='#333333';
@@ -79,7 +79,7 @@
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Loan Amount</p>
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term after 6 months</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="images/help.png" style="padding-left:8px;"></p>
+                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
                     <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">$30,000</p>
@@ -102,7 +102,7 @@
                         </p>
                     </div>
                     <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
-                        <img id="selectorThree" src="images/UnselectedCircle.svg"
+                        <img id="selectorThree" src="../images/UnselectedCircle.svg"
                         value='select' onclick="
             document.querySelector('#optionOne').style.backgroundColor='white'; 
             document.querySelector('#titleOneOne').style.color='#333333';
@@ -125,7 +125,7 @@
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Loan Amount</p>
                     <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term after 6 months</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="images/help.png" style="padding-left:8px;"></p>
+                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
                     <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">$30,000</p>

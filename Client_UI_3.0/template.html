@@ -65,6 +65,7 @@
         .sprk-b-PageTitle:before{content:"";width:32px;border-top-width:5px;border-top-style:solid;border-top-color:#c8102e;padding:0 0 16px}@media (min-width:54rem){.sprk-b-PageTitle:before{border-top-width:6px;padding:0 0 16px}}
         .sprk-b-TypeDisplayTwo,h2{line-height:1;color:#333;font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;font-size:2rem;font-weight:500}
         .sprk-b-TypeBodyFour{letter-spacing: -0.2px;}
+        .sprk-c-Modal{margin-left:16px; margin-right:16px; width:auto; top: calc(45% - 100px);}
 
         #TextInput{
             width: calc(50% - 8px);
@@ -79,7 +80,9 @@
         #TextInput--has-svg-icon{padding:12px 0 12px 40px}
         #TextInput--has-text-icon{padding:12px 13px 12px 37px}
         #TextInput[readonly]{color:#f7f7f7}
-       
+        
+        p{padding-top:24px;}
+        
         </style>
        
     </head>
@@ -110,7 +113,24 @@
    
     <div id="contents">
      
+<div class="sprk-c-Modal sprk-c-Modal--wait" role="dialog" tabindex="-1" aria-labelledby="modalWaitHeading" aria-modal="true" aria-describedby="modalWaitContent" data-sprk-modal="exampleWaitModal" data-sprk-modal-type="wait" data-id="modal-wait-1">
+  <div class="sprk-o-Stack sprk-o-Stack--large">
 
+
+    <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
+      <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
+      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading" onclick="cta();">
+        Please Wait...
+      </h2>
+      <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
+        This modal will close shortly for demonstration purposes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div data-sprk-modal-mask="true" class="sprk-c-ModalMask" tabindex="-1"></div>
+          
     </div>
     <div id="footer">
         <p class="sprk-b-TypeBodyFour">
