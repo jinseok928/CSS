@@ -9,7 +9,7 @@
                         </p>
                     </div>
                     <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
-                        <img id="selectorOne" src="images/UnselectedCircle.svg" value='select' onclick="
+                        <img id="selectorOne" src="../images/UnselectedCircle.svg" value='select' onclick="
                         document.querySelector('#optionOne').style.backgroundColor='#13A48E'; 
                         document.querySelector('#titleOneOne').style.color='white';
                         document.querySelector('#titleOneTwo').style.color='white';

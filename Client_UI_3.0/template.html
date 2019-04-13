@@ -89,7 +89,7 @@
     <body>
     <div id="header">
         <div id="menu">
-            <img src="../images/menu.svg">
+            <img src="../images/menu.svg" onclick="goback();">
         </div>
         <div id="logo">
             <img src="../images/logo.svg">
@@ -106,31 +106,21 @@
             })
         });
     }
+    function goback(){
+        pageNumber--;
+        fetch(pageNumber).then(function(response){
+            response.text().then(function(text){
+                document.querySelector('#contents').innerHTML =text;
+            })
+        });
+    }
     cta();
 
  
     </script>
    
     <div id="contents">
-     
-<div class="sprk-c-Modal sprk-c-Modal--wait" role="dialog" tabindex="-1" aria-labelledby="modalWaitHeading" aria-modal="true" aria-describedby="modalWaitContent" data-sprk-modal="exampleWaitModal" data-sprk-modal-type="wait" data-id="modal-wait-1">
-  <div class="sprk-o-Stack sprk-o-Stack--large">
-
-
-    <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
-      <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
-      <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading" onclick="cta();">
-        Please Wait...
-      </h2>
-      <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
-        This modal will close shortly for demonstration purposes.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div data-sprk-modal-mask="true" class="sprk-c-ModalMask" tabindex="-1"></div>
-          
+  
     </div>
     <div id="footer">
         <p class="sprk-b-TypeBodyFour">
