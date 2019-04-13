@@ -8,7 +8,7 @@
       <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading" onclick="cta();">
         Please Wait...
       </h2>
-      <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo" id="modalWaitContent">
+      <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo textPadding" id="modalWaitContent">
         This modal will close shortly for demonstration purposes.
       </p>
     </div>

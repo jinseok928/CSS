@@ -17,38 +17,28 @@
             vertical-align: middle;
         }
         #menu{width:20%; display:inline-block; vertical-align: middle;}
-        #logo{width:60%; display:inline-block; text-align:center; vertical-align: middle;        
+        #logo{width:60%; display:inline-block; text-align:center; vertical-align: middle;
         }
-
         #inputTwo{
             width: calc(50% - 10px);
-      
-   
         }
         #inputThree{
             width: calc(33% - 8px);
-           
             margin-right: 8px;
         }
-
-        
         #footer{
             background-color:#F7F7F7; 
             padding:24px 16px 40px 16px;
-
         }
         #contents{
             padding:16px 16px 40px 16px;
             min-height: 300px;
         }
-     
         #title{padding-top: 8px;
         margin-bottom:24px;
-
         }
         #input{
             margin-bottom:16px !important;
-
         }
         #input_helper{
             margin-bottom:8px !important;
@@ -92,14 +82,30 @@
         }
         
         .textPadding{padding-top:24px;}
+        .textPadding16{padding-top:16px;}
         .optionTitle{width:auto; min-height:72px;  border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;
 
 }
+.select{width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;}
         #option{border-radius:4px; width:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin-top: 8px; margin-bottom:8px;}
 .optionDetails{
         line-height: 1.5rem; padding-bottom: 16px;
     }
-        
+        #monetaryInput{
+            height:45px; width:222px; border:0px; margin:0px !important;
+        }
+        #borderColorOne{
+            margin: 0 16px 0 16px;
+        }
+        #borderColorTwo{
+            margin: 0 16px 0 16px;
+        }
+        #borderColorThree{
+            margin: 0 16px 0 16px;
+        }
+        .optionNormal{
+            border-radius:4px; width:auto; height:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin-top:16px; 0 16px 0; min-height:190px;
+        }
         </style>
        
     </head>
@@ -154,9 +160,38 @@
 
  
     </script>
- 
+  
  
     <div id="contents">
+        <div id='title'>
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Up to $35,000</h1>
+        </div>
+        <div id="sprk-b-InputContainer" style="margin-bottom:8px;">
+            <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="margin-bottom:16px;">
+                <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">Loan Amount</label>
+                    <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
+                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
+                        <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
+                                padding:8px !important; height:45px; width:58px; padding:0px; text-align:center; float:right;
+                                border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;">   
+                            <img src="../images/refresh.svg">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+             function myFunction() {
+                var amount=document.getElementById("monetaryInput").value;
+                var opOne = amount/47.0654;
+                opOne= opOne.toFixed(2);
+                var opTwo = amount/31.9118;
+                opTwo= opTwo.toFixed(2);
+                var opThree = amount/47.0654;
+                opThree= opThree.toFixed(2);
+                if(amount>=1000){
+                    document.querySelector('.options').innerHTML=`
         <div id="option"> 
             <div class="optionTitle" id="optionOne">
                 <div style="float:left;">
@@ -167,7 +202,8 @@
                         </b> / month
                     </p>
                 </div>
-                <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
+
+                <div class="select">
                     <img id="selectorOne" src="../images/UnselectedCircle.svg" value='select' onclick="
                         document.querySelector('#optionOne').style.backgroundColor='#13A48E'; 
                         document.querySelector('#titleOneOne').style.color='white';
@@ -187,7 +223,7 @@
                         ">                        
                 </div>
             </div>
-            <span class="sprk-c-Divider" id="borderColorOne" data-id="divider-1" style="margin: 0 16px 0 16px;"></span>
+            <span class="sprk-c-Divider" id="borderColorOne" data-id="divider-1"></span>
             <div style="width:65%; padding:16px 16px 0 16px; float:left;">
                 <p class="sprk-b-TypeBodyFour optionDetails">Loan Amount</p>
                 <p class="sprk-b-TypeBodyFour optionDetails">Term after 6 motnhs</p>
@@ -202,9 +238,8 @@
                     <p class="sprk-b-TypeBodyFour">0% APR will be offered for first six months, and then the specified APR would be charged for remained 60 months.</p>
                 </div>
             </div>
-            <div style="border-radius:4px; width:auto; height:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin: 16px 0 16px 0; min-height:190px;"
-            > 
-                <div id="optionTwo" style="min-height:72px; border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;">
+            <div class="optionNormal" > 
+                <div class="optionTitle" id="optionTwo">
                     <div style="float:left;">
                         <p id="titleTwoOne" class="sprk-b-TypeBodyFour" style="padding-bottom:8px;">Pay off quickly!</p>
                         <p id="titleTwoTwo" class="sprk-b-TypeBodyTwo" style="display:inline;">
@@ -213,9 +248,9 @@
                             </b> / month
                         </p>
                     </div>
-                    <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
+                    <div class="select">
                         <img id="selectorTwo" src="../images/UnselectedCircle.svg"
-                        value='select' onclick="
+                        onclick="
             document.querySelector('#optionOne').style.backgroundColor='white'; 
             document.querySelector('#titleOneOne').style.color='#333333';
             document.querySelector('#titleOneTwo').style.color='#333333';
@@ -236,22 +271,21 @@
                 </div>
                 <span class="sprk-c-Divider" id="borderColorTwo" data-id="divider-1" style="margin: 0 16px 0 16px;"></span>
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Loan Amount</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term after 6 months</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="../images/help.png" style="padding-left:8px;"></p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">Loan Amount</p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">Term after 6 months</p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">$30,000</p>
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">36 Mo.</p>
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 0px;">7.99%</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">$30,000</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">36 Mo.</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">7.99%</p>
                 </div>
                 <div style="width:100%; float:bottom;  padding:0 16px 24px 16px;">
-                    <p class="sprk-b-TypeBodyFour" style=""></p>
+                    <p class="sprk-b-TypeBodyFour"></p>
                 </div>
             </div>
-            <div id="option2" style="border-radius:4px; width:auto; height:auto; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); margin: 16px 0 16px 0; min-height:190px;"
-            > 
-                <div id="optionThree" style="min-height:72px; border-radius: 4px 4px 0 0; padding:12px 16px 12px 16px;">
+            <div class="optionNormal"> 
+                <div class="optionTitle" id="optionThree">
                     <div style="float:left;">
                         <p id="titleThreeOne" class="sprk-b-TypeBodyFour" style="padding-bottom:8px;">Increase monthly savings!</p>
                         <p id="titleThreeTwo" class="sprk-b-TypeBodyTwo" style="display:inline;">
@@ -260,9 +294,8 @@
                             </b> / month
                         </p>
                     </div>
-                    <div style="width:auto; height:100%; text-align:center; vertical-align: middle; float:right; padding: 4px 0 4px 0;">
-                        <img id="selectorThree" src="../images/UnselectedCircle.svg"
-                        value='select' onclick="
+                    <div class="select">
+                        <img id="selectorThree" src="../images/UnselectedCircle.svg" onclick="
             document.querySelector('#optionOne').style.backgroundColor='white'; 
             document.querySelector('#titleOneOne').style.color='#333333';
             document.querySelector('#titleOneTwo').style.color='#333333';
@@ -282,21 +315,35 @@
                 </div>
                 <span class="sprk-c-Divider" id="borderColorThree" data-id="divider-1" style="margin: 0 16px 0 16px;"></span>
                 <div style="width:65%; padding:16px 16px 0 16px; float:left;">
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Loan Amount</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 16px;">Term after 6 months</p>
-                    <p class="sprk-b-TypeBodyFour" style="line-height: 1.5rem; padding-bottom: 0px;">APR<img src="../images/help.png" style="padding-left:8px;"></p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">Loan Amount</p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">Term after 6 months</p>
+                    <p class="sprk-b-TypeBodyFour optionDetails">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px;">$30,000</p>
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 16px; font-weight:500;">60 Mo.</p>
-                    <p class="sprk-b-TypeDisplaySeven" style="line-height: 1.5rem; padding-bottom: 0px; font-weight:500;">9.99%</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">$30,000</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">60 Mo.</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">9.99%</p>
                 </div>
             </div>
-            <p class="sprk-b-TypeBodyFour" style="padding-bottom:32px;">Loan payment amount and APR assumes Autopay discount. Offers expire in 30 days. By selecting an offer and continuing, you will be subject to a hard credit inquiry (which may impact your credit score).</p>
-            <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="
-            cta();">
-                Select My Offer
-            </button>
+            <p class="sprk-b-TypeBodyFour textPadding16" >Loan payment amount and APR assumes Autopay discount. Offers expire in 30 days. By selecting an offer and continuing, you will be subject to a hard credit inquiry (which may impact your credit score).</p>
+        </div>
+        <div id="CTA">
+            <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px; margin-top:32px;" onclick="cta();">
+                    Select My Offer
+            </button>`;
+                }else{
+                    document.querySelector('.options').innerHTML=`
+                    <h5 class="sprk-b-TypeDisplaySix" style="padding:16px;">Sorry, our offer starts from $1,000.</h5>
+                    `;
+                }
+            }
+
+        </script>
+        <div class="options" style="min-height: 300px;">
+
+        </div>
+
+    
     </div>
     <div id="footer">
         <p class="sprk-b-TypeBodyFour">
