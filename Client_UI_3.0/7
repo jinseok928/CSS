@@ -1,1 +1,8 @@
-<h1>${selection}</h1>
+<script>
+ document.querySelector('.results').innerHTML=`
+<h1>${selectedAmount}</h1>`
+<h2></h2>
+</script>
+ <div class="results" style="min-height: 300px;">
+
+</div>
