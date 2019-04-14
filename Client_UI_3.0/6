@@ -18,7 +18,6 @@
             </div>
         </div>
         <script>
-            var selectedAmount;
             function myFunction() {
                 
                 var amount=document.getElementById("monetaryInput").value;
