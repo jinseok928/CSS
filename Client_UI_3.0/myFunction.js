@@ -1,4 +1,5 @@
-             function myFunction() {
+            var mySelection;
+            function seeOptions() {
                 var amount=document.getElementById("monetaryInput").value;
                 var opOne = amount/47.0654;
                 opOne= opOne.toFixed(2);
@@ -36,6 +37,7 @@
                         document.querySelector('#titleThreeTwo').style.color='#333333';
                         document.getElementById('selectorThree').src='../images/UnselectedCircle.svg';
                         document.querySelector('#borderColorThree').style.color='#EBEBEB';
+                        mySelection=1;
                         ">                        
                 </div>
             </div>
@@ -82,6 +84,7 @@
             document.querySelector('#titleThreeTwo').style.color='#333333';
             document.querySelector('#borderColorThree').style.borderColor='#EBEBEB';
             document.getElementById('selectorThree').src='../images/UnselectedCircle.svg';
+            mySelection=2;
 
             ">   
                     </div>
@@ -127,7 +130,9 @@
             document.querySelector('#titleThreeOne').style.color='white';
             document.querySelector('#titleThreeTwo').style.color='white';
             document.querySelector('#borderColorThree').style.borderColor='#FFFFFF';
-            document.getElementById('selectorThree').src='../images/SelectedCircle.svg';">
+            document.getElementById('selectorThree').src='../images/SelectedCircle.svg';
+            mySelection=3;
+            ">
                     </div>
                 </div>
                 <span class="sprk-c-Divider" id="borderColorThree" data-id="divider-1" style="margin: 0 16px 0 16px;"></span>
