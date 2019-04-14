@@ -1,6 +1,4 @@
-
        <script>
-       
              function myFunction() {
                 var amount=document.getElementById("monetaryInput").value;
                 var opOne = amount/47.0654;
