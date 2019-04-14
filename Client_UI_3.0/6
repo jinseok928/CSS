@@ -1,23 +1,5 @@
 
-        <div id='title'>
-            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle"><p class="sprk-b-TypeDisplayFive"> You are pre-approved </p>up to $35,000</h1>
-        </div>
-        <div id="sprk-b-InputContainer" style="margin-bottom:8px;">
-            <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="margin-bottom:16px;">
-                <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
-                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">What is the amount you need?</label>
-                    <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
-                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
-                        <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
-                                padding:8px !important; height:45px; width:58px; padding:0px; text-align:center; float:right;
-                                border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;">   
-                            <img src="../images/refresh.svg">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
+       <script>
        
              function myFunction() {
                 var amount=document.getElementById("monetaryInput").value;
@@ -177,6 +159,25 @@
             }
 
         </script>
+        <div id='title'>
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle"><p class="sprk-b-TypeDisplayFive"> You are pre-approved </p>up to $35,000</h1>
+        </div>
+        <div id="sprk-b-InputContainer" style="margin-bottom:8px;">
+            <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="margin-bottom:16px;">
+                <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+                    <label for="monetary-normal" class="sprk-b-Label sprk-b-Label--monetary">What is the amount you need?</label>
+                    <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
+                        <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
+                        <button onclick="myFunction();" class="sprk-c-Button" data-id="SeeMyOptions" style="
+                                padding:8px !important; height:45px; width:58px; padding:0px; text-align:center; float:right;
+                                border-radius: 2px; box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1); vertical-align: middle;">   
+                            <img src="../images/refresh.svg">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="options" style="min-height: 300px;">
 
         </div>
