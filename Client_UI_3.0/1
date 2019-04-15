@@ -5,16 +5,16 @@
     
             <div class="sprk-b-InputContainer">
                 <label for="text-input-normal" class="sprk-b-Label">First name</label>
-                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" placeholder="First Name">
 
                 <label for="text-input-normal" class="sprk-b-Label">Last Name</label>
-                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" placeholder="Last Name">
             
                 <label for="text-input-normal" class="sprk-b-Label">Phone Number</label>
-                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container">
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input" data-id="text-input-normal" type="text" value="" aria-describedby="text-input-normal--error-container" placeholder="Phone Number">
             
                 <label for="text-input-helper" class="sprk-b-Label">Email</label>
-                <input class="sprk-b-TextInput sprk-u-Width-100" id="input_helper" data-id="text-input-helper" type="text" value="" aria-describedby="text-input-helper--error-container" aria-invalid="true">
+                <input class="sprk-b-TextInput sprk-u-Width-100" id="input_helper" data-id="text-input-helper" type="text" value="" aria-describedby="text-input-helper--error-container" aria-invalid="true" placeholder="Email">
                 <div class="sprk-b-TypeBodyFour">
                     Please review the Communication Consent below about our use of your phone number and email address.
                 </div>
