@@ -14,7 +14,7 @@
   </div>
   <div class="sprk-b-SelectionContainer">
       <input id="checkbox-normal-1" data-id="checkbox-normal-1" type="checkbox" aria-describedby="checkbox-normal--error-container">
-      <label for="checkbox-normal-1" class="sprk-b-Label sprk-b-Label--inline">By checking this box you are indicating that you have read, consent to, and affix your electronic signature to the following four documents:</label>
+      <label for="checkbox-normal-1" class="sprk-b-Label sprk-b-Label--inline"> <p class="sprk-b-TypeBodyFour textPadding16" >By checking this box you are indicating that you have read, consent to, and affix your electronic signature to the following four documents:</p></label>
     </div>
     <ul class="sprk-b-List" data-id="unordered-list-1">
   <li data-id="list-item-1"><a class="sprk-b-Link" href="#nogo" data-id="link-1" data-analytics="object.action.event">Electronic Transactions and Disclosures Consent</a></li>
