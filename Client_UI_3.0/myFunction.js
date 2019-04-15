@@ -48,7 +48,7 @@
                 <p class="sprk-b-TypeBodyFour optionDetails">APR after 6 months<img src="../images/help.png" style="padding-left:8px;"></p>
             </div>
             <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
-                <p class="sprk-b-TypeDisplaySeven optionDetails">$30,000</p>
+                <p class="sprk-b-TypeDisplaySeven optionDetails">$${amount}</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">60 Mo.</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">7.99%</p>
                 </div>
@@ -96,7 +96,7 @@
                     <p class="sprk-b-TypeBodyFour optionDetails">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
-                    <p class="sprk-b-TypeDisplaySeven optionDetails">$30,000</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">$${amount}</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">36 Mo.</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">7.99%</p>
                 </div>
@@ -142,7 +142,7 @@
                     <p class="sprk-b-TypeBodyFour optionDetails">APR<img src="../images/help.png" style="padding-left:8px;"></p>
                 </div>
                 <div style="width:35%; text-align:right; padding:16px 16px 0 16px; float:right;">
-                    <p class="sprk-b-TypeDisplaySeven optionDetails">$30,000</p>
+                    <p class="sprk-b-TypeDisplaySeven optionDetails">$${amount}</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">60 Mo.</p>
                     <p class="sprk-b-TypeDisplaySeven optionDetails">9.99%</p>
                 </div>
