@@ -1,5 +1,28 @@
 
- <div class="results" style="min-height: 300px;">
+<!--PageSeven-->
+        <div id='title'>
+        
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Rocket Account</h1>
+            </div>
+         
+            <div class="sprk-b-InputContainer sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+             
+                
+                <div class="sprk-b-TypeBodyTwo">
+                    To continue, we need to you to create a Rocket Account.
+                </div>
+            </div>
+            <div id="CTA">
+                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="cta();">
+                    Continue
+            </button>
+        </div>
+
+<div id="results" style="min-height: 300px;">
+
+</div>
+<script type="text/javascript">
+document.querySelector('#results').innerHTML =`
 <h1>${mySelection}</h1>
 <h2>${amount}</h2>`
-</div>
+</script>

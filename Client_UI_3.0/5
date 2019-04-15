@@ -6,10 +6,10 @@
     <div class="sprk-o-Stack__item sprk-c-Modal__body sprk-o-Stack sprk-o-Stack--medium">
       <div class="sprk-o-Stack__item sprk-c-Spinner sprk-c-Spinner--circle sprk-c-Spinner--large sprk-c-Spinner--dark"></div>
       <h2 class="sprk-c-Modal__heading sprk-b-TypeDisplayFour" id="modalWaitHeading" onclick="cta();">
-        Please Wait...
+        One Moment...
       </h2>
       <p class="sprk-o-Stack__item sprk-b-TypeBodyTwo textPadding" id="modalWaitContent">
-        This modal will close shortly for demonstration purposes.
+        We are processing your information.
       </p>
     </div>
   </div>
