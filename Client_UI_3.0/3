@@ -9,10 +9,11 @@
                 <label for="text-input-helper" class="sprk-b-Label">Pre-tax Annual Income</label>
                 <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
                     <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
-                    <div class="sprk-b-TypeBodyFour">
-                    You do not need to include alimony, child support or separate maintenance income unless you want it considered as a basis for repaying the loan.
-                    </div>
                 </div>
+                <div class="sprk-b-TypeBodyFour">
+                    You do not need to include alimony, child support or separate maintenance income unless you want it considered as a basis for repaying the loan.
+                </div>
+                
                 <div id="CTA">
                     <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="cta();">
                     Continue
