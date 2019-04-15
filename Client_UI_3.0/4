@@ -4,16 +4,23 @@
             <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Social Security Number</h1>
             </div>
          
-            <div class="sprk-b-InputContainer sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
-             
-                <label for="text-input-helper" class="sprk-b-Label">Social Security Number</label>
-                <input class="sprk-b-TextInput sprk-u-Width-100" id="input_helper" data-id="text-input-helper" type="text" value="" aria-describedby="text-input-helper--error-container" aria-invalid="true">
-                <div class="sprk-b-TypeBodyFour">
-                    You do not need to include alimony, child support or separate maintenance income unless you want it considered as a basis for repaying the loan.
-                </div>
-            </div>
-            <div id="CTA">
-                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="cta();">
-                    Continue
-            </button>
+           <label for="password-normal" class="sprk-b-Label">Social Security Number</label>
+  <input class="sprk-b-TextInput sprk-u-Width-100" id="password-normal" data-id="password-normal" type="password" aria-describedby="password-normal--error-container">
+  <div class="sprk-b-SelectionContainer sprk-b-InputContainer__visibility-toggle">
+    <input id="password-normal-show-password" type="checkbox" data-id="password-normal-show-password">
+    <label for="password-normal-show-password" class="sprk-b-Label sprk-b-Label--inline">Show SSN</label>
+  </div>
+  <div class="sprk-b-ErrorContainer" id="password-normal--error-container">
+  </div>
+  <div class="sprk-b-SelectionContainer">
+      <input id="checkbox-normal-1" data-id="checkbox-normal-1" type="checkbox" aria-describedby="checkbox-normal--error-container">
+      <label for="checkbox-normal-1" class="sprk-b-Label sprk-b-Label--inline">By checking this box you are indicating that you have read, consent to, and affix your electronic signature to the following four documents:</label>
+    </div>
+    <ul class="sprk-b-List" data-id="unordered-list-1">
+  <li data-id="list-item-1"><a class="sprk-b-Link" href="#nogo" data-id="link-1" data-analytics="object.action.event">Electronic Transactions and Disclosures Consent</a></li>
+  <li data-id="list-item-2"><a class="sprk-b-Link" href="#nogo" data-id="link-1" data-analytics="object.action.event">Credit Pull Authorization</a></li>
+  <li data-id="list-item-3"><a class="sprk-b-Link" href="#nogo" data-id="link-1" data-analytics="object.action.event">Rocket Loans Privacy Notice</a></li>
+  <li data-id="list-item-3"><a class="sprk-b-Link" href="#nogo" data-id="link-1" data-analytics="object.action.event">Terms of Use</a></li>
+</ul>
+
         </div>
