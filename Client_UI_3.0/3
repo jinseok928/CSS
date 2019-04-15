@@ -2,18 +2,23 @@
         <div id='title'>
         
             <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Annual Income</h1>
-            </div>
-         
-            <div class="sprk-b-InputContainer sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
+        </div>
+        <div class="sprk-b-InputContainer" data-sprk-input="monetary" style="margin-bottom:16px;">
+            <div class="sprk-b-TextInputIconContainer sprk-b-TextInputIconContainer--has-text-icon">
              
                 <label for="text-input-helper" class="sprk-b-Label">Pre-tax Annual Income</label>
-             <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
-                <div class="sprk-b-TypeBodyFour">
+                <div style="width: 100%; border: 2px solid #bebebe; border-radius: 4px;">
+                    <input class="sprk-b-TextInput sprk-b-TextInput--has-text-icon" id="monetaryInput" pattern="(^\$?(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$)|^$" type="tel" aria-describedby="monetary-normal--error-container">
+                    <div class="sprk-b-TypeBodyFour">
                     You do not need to include alimony, child support or separate maintenance income unless you want it considered as a basis for repaying the loan.
+                    </div>
+                </div>
+                <div id="CTA">
+                    <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="cta();">
+                    Continue
+                </button>
                 </div>
             </div>
-            <div id="CTA">
-                <button class="sprk-c-Button" data-id="button-1" style="width:100%; padding-top:18px; padding-bottom:18px;" onclick="cta();">
-                    Continue
-            </button>
         </div>
+     
+              
