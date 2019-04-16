@@ -9,13 +9,14 @@
    
         <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
 
-<script src="myFunction.js"></script>
+        <script src="myFunction.js"></script>
         <style>
         #header{
             height:61px;
             padding:16px;
-            border-bottom:solid 2px #E6E6E6; 
+            border-bottom:solid 2px
             vertical-align: middle;
+          
         }
         #menu{width:20%; display:inline-block; vertical-align: middle;}
         #logo{width:60%; display:inline-block; text-align:center; vertical-align: middle;
@@ -28,7 +29,7 @@
             margin-right: 8px;
         }
         #footer{
-            background-color:#F7F7F7; 
+
             padding:24px 16px 40px 16px;
         }
         #contents{
@@ -45,20 +46,53 @@
             margin-bottom:8px !important;
             font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
         }
-        #body{
+        body{
              margin-top:16px;
              font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
+             background-color: #F7F7F7;
+        }
+        .pagePadding{
+            background-color:#FFFFFF;
+        }
+        .sprk-b-InputContainer{
+            max-width:600px;
+        }
+       
+        @media only screen and (min-width: 600px){
+            .pagePadding{
+                width:600px;
+                margin: 32px auto auto auto;
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                padding-left:64px;
+                padding-right:64px;
+                box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
+
+            }
+            body{
+                background-color:#F7F7F7;
+                margin: 0 0 0 0;
+                font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;}
+                #footer{
+                    margin-left:auto; margin-right:auto; padding-left:0; padding-right: 0;
+                }
+                
+
+            }
+
+            .sprk-b-PageTitle:before{content:"";width:32px;border-top-width:5px;border-top-style:solid;border-top-color:#c8102e;padding:0 0 16px}@media (min-width:54rem){.sprk-b-PageTitle:before{border-top-width:6px;padding:0 0 16px}}
+        .sprk-b-TypeDisplayTwo,h2{font-weight:500;letter-spacing: -0.8px; font-size:2rem;}
         }
         #CTA{
             padding-top:8px;
             font-family:RocketSans,Helvetica,Helvetica Neue,Arial,sans-serif;
         }
-        .sprk-b-PageTitle:before{content:"";width:32px;border-top-width:5px;border-top-style:solid;border-top-color:#c8102e;padding:0 0 16px}@media (min-width:54rem){.sprk-b-PageTitle:before{border-top-width:6px;padding:0 0 16px}}
+        .sprk-b-PageTitle:before{content:"";width:32px;border-top-width:5px;border-top-style:solid;border-top-color:#c8102e;padding:0 0 16px}
         .sprk-b-TypeDisplayTwo,h2{font-weight:500;letter-spacing: -0.8px;}
         .sprk-b-TypeDisplayFour{font-weight:500;}
         .sprk-b-TypeDisplayFive{font-weight:normal;}
         .sprk-b-TypeBodyFour{letter-spacing: -0.2px;}
-        .sprk-c-Modal{margin-left:16px; margin-right:16px; width:auto; top: calc(45% - 100px);}
+        .sprk-c-Modal{width: 264px; margin-left:auto; margin-right:auto; top: calc(45% - 100px);}
 
         #TextInput{
             width: calc(50% - 8px);
@@ -81,6 +115,13 @@
             padding-bottom:24px;
             width:279px;
             
+        }
+        .sprk-c-Spinner--large{
+            width: 5rem;
+            height: 5rem;
+        }
+        .sprk-c-Spinner--circle{
+            border:.22rem solid;
         }
         
         .textPadding{padding-top:24px;}
@@ -112,63 +153,67 @@
        
     </head>
     <body>
-    <div id="header">
-        <div id="menu">
-            <img src="../images/menu.svg" onclick="goback();">
-        </div>
-        <div id="logo">
-            <img src="../images/logo.svg">
-        </div>
-    
-    </div>
-    <script>
-            var pageNumber=0;
-    function cta(){
-        pageNumber++;
+        <div class="pagePadding">
+            <div id="header">
+                <div id="menu">
+                    <img src="../images/menu.svg" onclick="goback();">
+                </div>
+                <div id="logo">
+                    <img src="../images/logo.svg">
+                </div>
+            
+            </div>
+            <script>
+                    var pageNumber=0;
+            function cta(){
+                pageNumber++;
+                
+                fetch(pageNumber).then(function(response){
+                    if(response.status == '404'){
+                        fetch('NotFound').then(function(response){
+                            response.text().then(function(text){
+                                document.querySelector('#contents').innerHTML =text;
+                            })
+                        });
+                    } else{       
+                        response.text().then(function(text){
+                            document.querySelector('#contents').innerHTML =text;
+                        })
+                    }
+                    
+                });
+            }
+
+            function goback(){
+                pageNumber--; fetch(pageNumber).then(function(response){
+                    if(response.status == '404'){
+                        fetch('NotFound').then(function(response){
+                            response.text().then(function(text){
+                                document.querySelector('#contents').innerHTML =text;
+                            })
+                        });
+                    } else{       
+                        response.text().then(function(text){
+                            document.querySelector('#contents').innerHTML =text;
+                        })
+                    }
+                    
+                });
+            }
+            cta();
+
         
-        fetch(pageNumber).then(function(response){
-            if(response.status == '404'){
-                fetch('NotFound').then(function(response){
-                    response.text().then(function(text){
-                        document.querySelector('#contents').innerHTML =text;
-                    })
-                });
-            } else{       
-                response.text().then(function(text){
-                    document.querySelector('#contents').innerHTML =text;
-                })
-            }
+            </script>
+        
+        
+            <div id="contents">    
+             
             
-        });
-    }
-
-    function goback(){
-        pageNumber--; fetch(pageNumber).then(function(response){
-            if(response.status == '404'){
-                fetch('NotFound').then(function(response){
-                    response.text().then(function(text){
-                        document.querySelector('#contents').innerHTML =text;
-                    })
-                });
-            } else{       
-                response.text().then(function(text){
-                    document.querySelector('#contents').innerHTML =text;
-                })
-            }
-            
-        });
-    }
-    cta();
-
- 
-    </script>
-  
- 
-    <div id="contents">    
-     
-    </div>
-    <div id="footer">
-        <p class="sprk-b-TypeBodyFour">
+            </div>
+           
+        </div>
+        <div id="footer" style="max-width:600px;">
+            <p class="sprk-b-TypeBodyFour">
                 Copyright protected 2019 RockLoans Marketplace LLC. All rights reserved.<br><br>
                 All personal loans are made by RockLoans Marketplace LLC, a Michigan limited liability company, Equal Housing Lender. All loans are unsecured, fully amortizing personal loans. Eligibility for a loan is not guaranteed. Please refer to our Disclosures and Licenses page for state-required disclosures, licenses, and lending restrictions. 
                 Borrower must be a U.S. citizen or permanent U.S. resident alien at least 18 years of age (in Nebraska and Alabama a borrower must be at least 19 years of age). All loan applications are subject to credit review and approval and offered loan terms depend upon credit score, requested amount, requested loan term, credit usage, credit history and other factors. Not all borrowers receive the lowest interest rate. To qualify for the lowest rate, you must have excellent credit, meet certain conditions, and select autopay. Rates and Terms are subject to change at any time without notice. 
@@ -177,8 +222,7 @@
                 NMLS #1399530. Click here for Rocket Loans NMLS consumer access page.
                 <br><br>      
                 RockLoans Marketplace LLC dba RocketLoans dba Rocket Loans | 1274 Library Street, 2nd Floor, Detroit, MI 48226
-        </p>
-    </div>
-    
-</body>
+            </p>
+        </div>
+    </body>
 </html>
