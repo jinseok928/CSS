@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link href="https://www.rocketloans.com/images/favicon.ico" rel="Shortcut Icon" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>New Client UI Design 3.0</title>
+        <link rel="preload" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://sparkdesignsystem.com/assets/toolkit/styles/toolkit.css"></noscript>
+        <style>
+            .pagePadding {
+                max-width:1000px;
+                margin:auto;
+                }
+            .cardSection { 
+                border: 0px solid #E6E6E6;
+                border-radius: 4px;
+                background-color: #FFFFFF;
+                box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+                padding: 32px 24px 48px 24px;
+                margin-top:16px;
+                margin-bottom:32px;
+                }
+            .nocardSection{
+                margin-top:16px;
+                margin-bottom:48px;
+                }
+            .sprk-b-Select{
+                width:136px !important;
+                }
+            h1{
+                padding-top:64px;
+                }
+            .step{
+                margin-top:32px;
+            }
+            label.sprk-b-Label{
+                width: 100%;
+                display:inline-block;
+            }
+            label.stateLabel{
+                width: 130px;
+                display:inline-block;
+            }
+            div.state{
+                width:136px;
+                display:inline-block;
+            }
+            .sprk-b-TextInput{
+                margin-bottom:24px;
+                width: 100%;
+            }
+            .sprk-b-Select{
+                margin-bottom:24px;
+            }
+            div.sprk-b-InputContainer{
+                width: calc(50% - 4px);
+                padding-left:8px;
+                padding-right:8px;
+                display:inline-block;
+                margin:0;
+                max-width: 492px;
+            }
+            .sprk-b-TypeDisplayFive{
+                padding-bottom:16px;
+           
+            }
+            .sprk-c-Button{
+                margin-left:8px;
+
+            }
+            .sprk-b-TypeDisplaySeven{
+                padding-bottom:16px;
+               
+            }
+            div.zipcode{margin-left:16px;
+                width: calc(100% - 157px);
+                display:inline-block;
+
+            }
+
+            .incard{ margin-left:8px !important;
+                margin-right:8px !important;
+            }
+            
+            .sprk-b-TypeDisplayFour{
+                font-weight:500;
+            }
+            .onwer1{
+                background-color:white;
+            }
+            .onwer2{
+                background-color:white;
+            }
+
+         
+           
+
+              
+        </style>
+        <script>
+            var appProcess;
+            var ownership; // if it is 1, go to the next step.
+            function save() {
+                appProcess++;                 
+                fetch(appProcess).then(function(response){
+                  
+                        response.text().then(function(text){
+                            document.querySelector('#Step'+appProcess).innerHTML =text;
+                        })
+                                     
+                });
+            }
+            function select1() {
+                document.querySelector("#owner1").style.backgroundColor='#13A48E';
+                document.querySelector("#owner1").style.color='#FFFFFF';
+                document.querySelector("#owner2").style.backgroundColor='#FFFFFF'; document.querySelector("#owner2").style.color='#333333';
+                }
+            function select2() {
+                document.querySelector("#owner1").style.backgroundColor='#FFFFFF';
+                document.querySelector("#owner1").style.color='#333333';
+                document.querySelector("#owner2").style.backgroundColor='#13A48E';
+                document.querySelector("#owner2").style.color='#FFFFFF';
+                }
+            function showQ1() {document.querySelector('#question2').innerHTML =``;}
+            function showQ2() {document.querySelector('#question2').innerHTML =`<h5 class="sprk-b-TypeDisplaySeven" sytle="padding-bottom:16px;">If no, do you have signature authority to bind the company?</h5>
+                        <div class="buttonContainer">
+                            <button class="yes" id="owner3" onclick="select3();" style="width:195px; height: 76px; background:white;	border: 1px solid #E6E6E6;	border-radius: 4px;	box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);text-align:left; padding-left:24px;">Yes</button>
+                            <button class="no" id="owner4" onclick="select4(); showQ3();"  style="width:195px; height: 76px; background:white;	border: 1px solid #E6E6E6;	border-radius: 4px;	box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);margin-left:16px; text-align:left; padding-left:24px;">No</button>
+                        </div>`;}
+            function select3() {
+                document.querySelector("#owner3").style.backgroundColor='#13A48E';
+                document.querySelector("#owner3").style.color='#FFFFFF';
+                document.querySelector("#owner4").style.backgroundColor='#FFFFFF'; document.querySelector("#owner4").style.color='#333333';
+                document.querySelector('#question3').innerHTML =``;}
+              
+            function select4() {
+                document.querySelector("#owner3").style.backgroundColor='#FFFFFF';
+                document.querySelector("#owner3").style.color='#333333';
+                document.querySelector("#owner4").style.backgroundColor='#13A48E';
+                document.querySelector("#owner4").style.color='#FFFFFF';
+                }
+            function showQ3(){
+                    document.querySelector('#question3').innerHTML =`<p class="sprk-b-TypeBodyOne" sytle="margin-top:16px; margin-bottom:16px;">Sorry, you cannot proceed the application without the signature authority.</p>`;}
+              
+                      
+                    </script>
+    </head>
+    <body>
+        <div class="pagePadding">
+              
+            <h1 class="sprk-b-TypeDisplayTwo sprk-b-PageTitle">Become Rocket Loans Partner</h1>
+            <div id="Step1" class="step">
+                    <h2 class="sprk-b-TypeDisplayThree">Step 1.</h2>
+                <div class="cardSection">
+                        <h3 class="sprk-b-TypeDisplayFour incard" style="padding-bottom:24px;">Personal Information</h4>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">First Name</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Last Name</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Business Name</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Title with Company</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Email Address</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Phone Number</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
+                        
+                        
+                        <button class="sprk-c-Button" data-id="button-1" onclick="save();">Start Application</button>
+                    </div>
+            </div>
+            <div id="Step2" class="step">
+              
+            </div>
+            <div id="Step3" class="step">
+                
+            </div>
+            <div id="Step4" class="step">
+               
+           
+            
+            </div>
+            <div id="Step5" class="step">
+            </div>
+            <div id="Step6" class="step">
+                
+            </div>
+
+        </div>
+    </body>
+</html>
