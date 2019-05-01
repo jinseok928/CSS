@@ -15,9 +15,9 @@
                         <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Social Security Number</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
                         
                         <h4 class="sprk-b-TypeDisplayFive" sytle="padding-bottom:16px;">Residential Address</h5>
-                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Street Address</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
-                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Apt, Suite, Unit, ect.</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
-                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">City</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Street Address</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100"></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Apt, Suite, Unit, ect.</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100"></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">City</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100"></div>
                         <div class="sprk-b-InputContainer">
                             <div class="state">
                                 <label for="physicalState" class="stateLabel">State</label>
@@ -25,7 +25,7 @@
                                 
                             </div>
                             <div class="zipcode">
-                                <label for="email" class="sprk-b-Label">Zipcode</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000">
+                                <label for="email" class="sprk-b-Label">Zipcode</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100">
                             </div>
                             
                         </div>
