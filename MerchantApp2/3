@@ -1,0 +1,28 @@
+<h2 class="sprk-b-TypeDisplayThree">Step 3.</h2>
+                <div class="cardSection">
+                        <h3 class="sprk-b-TypeDisplayFour incard" style="padding-bottom:24px;">Business Information</h4>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Legal Business Name("Merchant")</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">All Trade Names/Assumed Names/Doing Business As</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">In Business Since (MM/DD/YYYY)</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Business Phone</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" value=""></div>
+                        
+                       
+                                <h4 class="sprk-b-TypeDisplayFive incard" sytle="padding-bottom:16px;">Physical Address</h5>
+                       
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Street Address</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">Apt, Suite, Unit, ect.</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
+                        <div class="sprk-b-InputContainer" data-sprk-required-only="text"><label for="email" class="sprk-b-Label">City</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000"></div>
+                        <div class="sprk-b-InputContainer">
+                            <div class="state">
+                                <label for="physicalState" class="stateLabel">State</label>
+                                <select aria-describedby="physicalState--error-container" class="sprk-b-Select" data-id="physicalState" data-sprk-input="select" id="physicalState" name="physicalState" required="" width="100"><option value=""></option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="PR">PR</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
+                                
+                            </div>
+                            <div class="zipcode">
+                                <label for="email" class="sprk-b-Label">Zipcode</label><input class="sprk-b-TextInput" id="email" data-id="email" type="email" aria-describedby="email--error-container" name="email" width="100" placeholder="(000) 000-0000">
+                            </div>
+                        </div>
+                
+                    <button class="sprk-c-Button" data-id="button-1" onclick="save();">Save</button>
+
+                </div>
