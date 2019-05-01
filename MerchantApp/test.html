@@ -117,12 +117,21 @@
                 document.querySelector("#owner1").style.backgroundColor='#13A48E';
                 document.querySelector("#owner1").style.color='#FFFFFF';
                 document.querySelector("#owner2").style.backgroundColor='#FFFFFF'; document.querySelector("#owner2").style.color='#333333';
+                appProcess=3;
+                fetch(appProcess).then(function(response){
+                  
+                  response.text().then(function(text){
+                      document.querySelector(step).innerHTML =text;
+                  })
+                               
+          });
                 }
             function select2() {
                 document.querySelector("#owner1").style.backgroundColor='#FFFFFF';
                 document.querySelector("#owner1").style.color='#333333';
                 document.querySelector("#owner2").style.backgroundColor='#13A48E';
                 document.querySelector("#owner2").style.color='#FFFFFF';
+                document.querySelector(step).innerHTML =text;
                 }
             function showQ1() {document.querySelector('#question2').innerHTML =``;}
             function showQ2() {document.querySelector('#question2').innerHTML =`<h5 class="sprk-b-TypeDisplaySeven" sytle="padding-bottom:16px;">If no, do you have signature authority to bind the company?</h5>
