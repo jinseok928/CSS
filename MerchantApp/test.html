@@ -99,14 +99,16 @@
               
         </style>
         <script>
-            var appProcess=0;
+            var appProcess=1;
+            var step;
             var ownership; // if it is 1, go to the next step.
             function save() {
                 appProcess++;                 
+                step="#Step"+appProcess;
                 fetch(appProcess).then(function(response){
                   
                         response.text().then(function(text){
-                            document.querySelector('#Step2').innerHTML =text;
+                            document.querySelector(step).innerHTML =text;
                         })
                                      
                 });
