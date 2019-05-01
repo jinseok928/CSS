@@ -117,6 +117,7 @@
                 document.querySelector("#owner1").style.backgroundColor='#13A48E';
                 document.querySelector("#owner1").style.color='#FFFFFF';
                 document.querySelector("#owner2").style.backgroundColor='#FFFFFF'; document.querySelector("#owner2").style.color='#333333';
+                document.querySelector('#question3').innerHTML =``;
                 }
             function select2() {
                 document.querySelector("#owner1").style.backgroundColor='#FFFFFF';
@@ -134,13 +135,22 @@
                 document.querySelector("#owner3").style.backgroundColor='#13A48E';
                 document.querySelector("#owner3").style.color='#FFFFFF';
                 document.querySelector("#owner4").style.backgroundColor='#FFFFFF'; document.querySelector("#owner4").style.color='#333333';
-                document.querySelector('#question3').innerHTML =``;}
+                document.querySelector('#question3').innerHTML =``;
+                appProcess=3;
+                fetch(appProcess).then(function(response){
+                  
+                  response.text().then(function(text){
+                      document.querySelector('#Step1').innerHTML =text;
+                  })
+                               
+          });}
               
             function select4() {
                 document.querySelector("#owner3").style.backgroundColor='#FFFFFF';
                 document.querySelector("#owner3").style.color='#333333';
                 document.querySelector("#owner4").style.backgroundColor='#13A48E';
                 document.querySelector("#owner4").style.color='#FFFFFF';
+                
                 }
             function showQ3(){
                     document.querySelector('#question3').innerHTML =`<p class="sprk-b-TypeBodyOne" sytle="margin-top:16px; margin-bottom:16px;">Sorry, you cannot proceed the application without the signature authority.</p>`;}
