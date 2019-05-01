@@ -117,14 +117,6 @@
                 document.querySelector("#owner1").style.backgroundColor='#13A48E';
                 document.querySelector("#owner1").style.color='#FFFFFF';
                 document.querySelector("#owner2").style.backgroundColor='#FFFFFF'; document.querySelector("#owner2").style.color='#333333';
-                appProcess=3;
-                fetch(appProcess).then(function(response){
-                  
-                  response.text().then(function(text){
-                      document.querySelector(step).innerHTML =text;
-                  })
-                               
-          });
                 }
             function select2() {
                 document.querySelector("#owner1").style.backgroundColor='#FFFFFF';
